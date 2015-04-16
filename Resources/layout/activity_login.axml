@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue_sky">
+    <include
+        layout="@layout/toolbar" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30px" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:text="Username"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="20sp"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:textSize="20sp"
+                android:textColor="@android:color/primary_text_light"
+                android:background="@android:color/background_light"
+                android:id="@+id/edUsername"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingBottom="5dip" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/gray" />
+            <TextView
+                android:text="Password"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="20sp"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:textStyle="bold" />
+            <EditText
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="20sp"
+                android:background="@android:color/background_light"
+                android:id="@+id/edPassword"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingBottom="5dip" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/gray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip">
+                <CheckBox
+                    android:id="@+id/cbAutoLogin"
+                    android:layout_height="70px"
+                    android:layout_width="70px" />
+                <TextView
+                    android:text="Auto login"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textSize="20sp"
+                    android:id="@+id/textView1"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnLogin"
+                android:background="@@drawable/corner_login_btn"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:text="@string/bt_login"
+                style="@style/button_text" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

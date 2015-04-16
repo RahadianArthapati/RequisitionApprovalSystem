@@ -1,0 +1,20 @@
+﻿using System;
+
+namespace RQNApprovalSystem
+{
+	public class DataProvider
+	{
+		private static string TAG = "DataProvider";
+		public static void vInitDatabase(cbll bll)
+		{
+			bll.vExecuteSql ("CREATE TABLE IF NOT EXISTS tSite(BRANCHCODE VARCHAR(20))");
+			bll.vExecuteSql ("CREATE TABLE IF NOT EXISTS tUser(USER_ID VARCHAR(20), IS_AUTOLOGIN BIT NOT NULL)");
+			bll.vExecuteSql ("CREATE TABLE IF NOT EXISTS tPendingRqn(BRANCHCODE VARCHAR (20), DOCNUMBER VARCHAR (20), "+
+				"DESCRIPTIO VARCHAR (200), REQRID VARCHAR (50), REQRNAME VARCHAR (50), REQDATE VARCHAR (20), COSTCTR VARCHAR (20), "+
+				"ACTION VARCHAR (10), RQNTOTVALUE VARCHAR (20), RQNCURRCODE VARCHAR (5), RQRDDATE VARCHAR (20), COMMENT VARCHAR (200))");
+			bll.vExecuteSql ("CREATE TABLE IF NOT EXISTS tRqnAction(DOCNUMBER VARCHAR(20), ACTION VARCHAR(10), INPUTDATE VARCHAR(20), STAMP VARCHAR (10))");
+			
+		}
+	}
+}
+

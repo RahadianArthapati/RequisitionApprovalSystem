@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="action_setting">Setting</string>
+	<string name="action_sort">Sort</string>
+	<string name="action_logout">Log out</string>
+	<string name="app_name">Requisition Approval System</string>
+	<string name="bt_login">Login</string>
+	<string name="bt_logout">Logout</string>
+	<string name="bt_cancel">Cancel</string>
+	<string name="bt_approve">Approve</string>
+	<string name="bt_reject">Reject</string>
+	<string name="bt_undo">Undo</string>
+	<string name="action_title">Action</string>
+	<string name="comment">Comment</string>
+    <string-array name="action_setting">
+        <item>Log out</item>
+        <item>Setting</item>
+        <item>About</item>
+    </string-array>
+</resources>

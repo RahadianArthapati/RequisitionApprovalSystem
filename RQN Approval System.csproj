@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D66A1937-1993-4979-B18F-D4DB4C491F36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RQNApprovalSystem</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>Sample</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <MandroidI18n>
+    </MandroidI18n>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <JavaOptions>
+    </JavaOptions>
+    <MonoDroidExtraArgs>
+    </MonoDroidExtraArgs>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="Refractored.PagerSlidingTabStrip">
+      <HintPath>packages\Refractored.PagerSlidingTabStrip.1.0.1\lib\MonoAndroid10\Refractored.PagerSlidingTabStrip.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>packages\Xamarin.Android.Support.v7.AppCompat.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>packages\Xamarin.Android.Support.v7.CardView.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\..\..\..\Downloads\monodroid-samples-master\monodroid-samples-master\android5.0\NavigationDrawer\packages\Xamarin.Android.Support.v7.RecyclerView.21.0.0-rc1v2\lib\MonoAndroid10\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="GCM.Client">
+      <HintPath>..\..\..\..\Downloads\GCMClient-1.0\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BaseActivity.cs" />
+    <Compile Include="Views\Login.cs" />
+    <Compile Include="Views\Main.cs" />
+    <Compile Include="LoginActivity.cs" />
+    <Compile Include="SplashscreenActivity.cs" />
+    <Compile Include="Models\cArrayList.cs" />
+    <Compile Include="Models\ST_RequisitionData.cs" />
+    <Compile Include="Controllers\Connections\cbll.cs" />
+    <Compile Include="Controllers\Connections\cd.cs" />
+    <Compile Include="Controllers\Connections\cdal.cs" />
+    <Compile Include="Models\Providers\DataProvider.cs" />
+    <Compile Include="Controllers\Utils\Config.cs" />
+    <Compile Include="Controllers\Utils\Utils.cs" />
+    <Compile Include="Views\Transformers\FadeTransformer.cs" />
+    <Compile Include="BranchFragment.cs" />
+    <Compile Include="Controllers\Adapters\MainBranchAdapter.cs" />
+    <Compile Include="Controllers\RequisitionPending.cs" />
+    <Compile Include="Controllers\Interfaces\IAction.cs" />
+    <Compile Include="DetailActivity.cs" />
+    <Compile Include="DetailItemFragment.cs" />
+    <Compile Include="DetailFlowFragment.cs" />
+    <Compile Include="Controllers\Adapters\DetailItemAdapter.cs" />
+    <Compile Include="Controllers\Adapters\DetailFlowAdapter.cs" />
+    <Compile Include="DetailFragment.cs" />
+    <Compile Include="Controllers\Services\GCMService.cs" />
+    <Compile Include="ActionFragment.cs" />
+    <Compile Include="Controllers\Interfaces\ISort.cs" />
+    <Compile Include="Web References\RAS\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Web References\RAS\Service1.wsdl" />
+    <None Include="Web References\RAS\Service1.disco" />
+    <None Include="Web References\RAS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\toolbar.axml" />
+    <AndroidResource Include="Resources\layout\activity_main.axml" />
+    <AndroidResource Include="Resources\menu\main.xml" />
+    <AndroidResource Include="Resources\values-v19\themes.xml" />
+    <AndroidResource Include="Resources\values\themes.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values-sw720dp-land\dimens.xml" />
+    <AndroidResource Include="Resources\layout-land\fragment_quick_contact.axml" />
+    <AndroidResource Include="Resources\drawable\background_tabs_diagonal.xml" />
+    <AndroidResource Include="Resources\drawable\background_tabs.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher_actionbar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher_actionbar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\actionbar_bottom.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\background_card.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\contact.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_user.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher_actionbar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher_chrome.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher_gmail.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher_gmaps.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher_gplus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tabs_pattern_diagonal.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tabs_pattern.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher_actionbar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\layout\Fragment_Site.axml" />
+    <AndroidResource Include="Resources\layout\header.axml" />
+    <AndroidResource Include="Resources\layout\Splashscreen.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\logo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\red_button.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\layout\list_main_item.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\drawer_shadow.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_drawer.png" />
+    <AndroidResource Include="Resources\drawable\corner.xml" />
+    <AndroidResource Include="Resources\layout\activity_detail.axml" />
+    <AndroidResource Include="Resources\layout\list_detail_item.axml" />
+    <AndroidResource Include="Resources\layout\list_detail_flow.axml" />
+    <AndroidResource Include="Resources\layout\toolbar_bottom.axml" />
+    <AndroidResource Include="Resources\layout\fragment_detail.axml" />
+    <AndroidResource Include="Resources\menu\bottom.xml" />
+    <AndroidResource Include="Resources\layout\fragment_detail_list.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_sort_by_size.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_sort_by_size.png" />
+    <AndroidResource Include="Resources\layout\activity_login.axml" />
+    <AndroidResource Include="Resources\drawable\corner_login_btn.xml" />
+    <AndroidResource Include="Resources\layout\activity_splashscreen.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_settings.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_settings.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_settings.png" />
+    <AndroidResource Include="Resources\layout\action_setting.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_overflow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_overflow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_overflow.png" />
+    <AndroidResource Include="Resources\layout\fragment_action.axml" />
+    <AndroidResource Include="Resources\drawable\corner_green_top.xml" />
+    <AndroidResource Include="Resources\drawable\corner_red_bottom.xml" />
+    <AndroidResource Include="Resources\drawable\corner_yellow_right.xml" />
+    <AndroidResource Include="Resources\drawable\corner_red_right.xml" />
+    <AndroidResource Include="Resources\drawable\corner_green_right.xml" />
+    <AndroidResource Include="Resources\drawable\corner_yellow.xml" />
+    <AndroidResource Include="Resources\drawable\corner_grey_top.xml" />
+    <AndroidResource Include="Resources\drawable\corner_grey.xml" />
+    <AndroidResource Include="Resources\drawable\corner_grey_bottom.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Models\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Controllers\Adapters\" />
+    <Folder Include="Controllers\Interfaces\" />
+    <Folder Include="Controllers\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://20.110.1.5:8092/RAS_NEW/Service1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RAS</RelPath>
+      <UpdateFromURL>http://20.110.1.5:8092/RAS_NEW/Service1.asmx</UpdateFromURL>
+    </WebReferenceUrl>
+  </ItemGroup>
+</Project>

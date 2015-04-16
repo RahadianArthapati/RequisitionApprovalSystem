@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_window">#FFE5E5E5</color>
+    <color name="green">#229F2F</color>
+    <color name="greenDark">#3E5F22</color>
+    <color name="banana">#FFCC00</color>
+    <color name="brown">#FF814B</color>
+    <!---<color name="blue">#5E5AFF</color>-->
+    <color name="blue">#7294FF</color>
+
+    <color name="blue_sky">#BACCE8</color>
+    <color name="gray">#9C9F9F</color>
+    <color name="pink">#FF85E5</color>
+    <color name="red">#FF0000</color>
+    <color name="light_gray">#F0EEE5</color>
+
+</resources>

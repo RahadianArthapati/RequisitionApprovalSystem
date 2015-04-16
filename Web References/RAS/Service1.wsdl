@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getFieldValueNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fldname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFieldValueNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFieldValueNewResult" type="tns:ArrayOfCemFieldValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCemFieldValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="cemFieldValue" nillable="true" type="tns:cemFieldValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="cemFieldValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="fld_valu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fld_desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getDetailRequisition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDocNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetailRequisitionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetailRequisitionResult" type="tns:ArrayOfCemDetailRequisition" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCemDetailRequisition">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="cemDetailRequisition" nillable="true" type="tns:cemDetailRequisition" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="cemDetailRequisition">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RQNLSEQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITEMNO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COSTCTR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FMTITEMNO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITEMDESC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VDCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VDNAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCATION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RQRDDATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REQQTY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORDERUNIT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNITCOST" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURRCODE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getPendingRequisition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNxtactionr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPendingRequisitionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPendingRequisitionResult" type="tns:ArrayOfCemPendingRequisition" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCemPendingRequisition">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="cemPendingRequisition" nillable="true" type="tns:cemPendingRequisition" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="cemPendingRequisition">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BRANCHCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DOCNUMBER" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRIPTIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REQRID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REQRNAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REQDATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COSTCTR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACTION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RQNTOTVALUE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RQNCURRCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RQRDDATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COMMENT" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getUserAD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDomain" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserADResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUserADResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetailFlow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDocNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetailFlowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetailFlowResult" type="tns:ArrayOfCemDetailFlow" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCemDetailFlow">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="cemDetailFlow" nillable="true" type="tns:cemDetailFlow" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="cemDetailFlow">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EVENTSEQ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STEPNUM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STEPTYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STEPDESC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EVENTDATE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EVENTTIME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USERID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getBranch">
+        <s:complexType />
+      </s:element>
+      <s:element name="getBranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBranchResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="vInsertRequisition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sBranchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDocNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vInsertRequisitionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vInsertRequisitionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vUploadtoAccpac">
+        <s:complexType />
+      </s:element>
+      <s:element name="vUploadtoAccpacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vUploadtoAccpacResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vGetDocumentWorkflow">
+        <s:complexType />
+      </s:element>
+      <s:element name="vGetDocumentWorkflowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vGetDocumentWorkflowResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vPushRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRegistrationID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isRegister" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vPushRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vPushRegistrationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vClearTemporaryRequisition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sNxtactionr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="vClearTemporaryRequisitionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vClearTemporaryRequisitionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfCemFieldValue" nillable="true" type="tns:ArrayOfCemFieldValue" />
+      <s:element name="ArrayOfCemDetailRequisition" nillable="true" type="tns:ArrayOfCemDetailRequisition" />
+      <s:element name="ArrayOfCemPendingRequisition" nillable="true" type="tns:ArrayOfCemPendingRequisition" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfCemDetailFlow" nillable="true" type="tns:ArrayOfCemDetailFlow" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getFieldValueNewSoapIn">
+    <wsdl:part name="parameters" element="tns:getFieldValueNew" />
+  </wsdl:message>
+  <wsdl:message name="getFieldValueNewSoapOut">
+    <wsdl:part name="parameters" element="tns:getFieldValueNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRequisitionSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetailRequisition" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRequisitionSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetailRequisitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequisitionSoapIn">
+    <wsdl:part name="parameters" element="tns:getPendingRequisition" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequisitionSoapOut">
+    <wsdl:part name="parameters" element="tns:getPendingRequisitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserADSoapIn">
+    <wsdl:part name="parameters" element="tns:getUserAD" />
+  </wsdl:message>
+  <wsdl:message name="getUserADSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserADResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDetailFlowSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetailFlow" />
+  </wsdl:message>
+  <wsdl:message name="getDetailFlowSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetailFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBranchSoapIn">
+    <wsdl:part name="parameters" element="tns:getBranch" />
+  </wsdl:message>
+  <wsdl:message name="getBranchSoapOut">
+    <wsdl:part name="parameters" element="tns:getBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="vInsertRequisitionSoapIn">
+    <wsdl:part name="parameters" element="tns:vInsertRequisition" />
+  </wsdl:message>
+  <wsdl:message name="vInsertRequisitionSoapOut">
+    <wsdl:part name="parameters" element="tns:vInsertRequisitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="vUploadtoAccpacSoapIn">
+    <wsdl:part name="parameters" element="tns:vUploadtoAccpac" />
+  </wsdl:message>
+  <wsdl:message name="vUploadtoAccpacSoapOut">
+    <wsdl:part name="parameters" element="tns:vUploadtoAccpacResponse" />
+  </wsdl:message>
+  <wsdl:message name="vGetDocumentWorkflowSoapIn">
+    <wsdl:part name="parameters" element="tns:vGetDocumentWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="vGetDocumentWorkflowSoapOut">
+    <wsdl:part name="parameters" element="tns:vGetDocumentWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="vPushRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:vPushRegistration" />
+  </wsdl:message>
+  <wsdl:message name="vPushRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:vPushRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="vClearTemporaryRequisitionSoapIn">
+    <wsdl:part name="parameters" element="tns:vClearTemporaryRequisition" />
+  </wsdl:message>
+  <wsdl:message name="vClearTemporaryRequisitionSoapOut">
+    <wsdl:part name="parameters" element="tns:vClearTemporaryRequisitionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFieldValueNewHttpGetIn">
+    <wsdl:part name="fldname" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFieldValueNewHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCemFieldValue" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRequisitionHttpGetIn">
+    <wsdl:part name="sDocNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRequisitionHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCemDetailRequisition" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequisitionHttpGetIn">
+    <wsdl:part name="sNxtactionr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequisitionHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCemPendingRequisition" />
+  </wsdl:message>
+  <wsdl:message name="getUserADHttpGetIn">
+    <wsdl:part name="sDomain" type="s:string" />
+    <wsdl:part name="sUserID" type="s:string" />
+    <wsdl:part name="sPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getUserADHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailFlowHttpGetIn">
+    <wsdl:part name="sDocNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailFlowHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCemDetailFlow" />
+  </wsdl:message>
+  <wsdl:message name="getBranchHttpGetIn" />
+  <wsdl:message name="getBranchHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="vInsertRequisitionHttpGetIn">
+    <wsdl:part name="sBranchCode" type="s:string" />
+    <wsdl:part name="sDocNumber" type="s:string" />
+    <wsdl:part name="sAction" type="s:string" />
+    <wsdl:part name="sDateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="vInsertRequisitionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="vUploadtoAccpacHttpGetIn" />
+  <wsdl:message name="vUploadtoAccpacHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="vGetDocumentWorkflowHttpGetIn" />
+  <wsdl:message name="vGetDocumentWorkflowHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="vPushRegistrationHttpGetIn">
+    <wsdl:part name="sUserID" type="s:string" />
+    <wsdl:part name="sRegistrationID" type="s:string" />
+    <wsdl:part name="isRegister" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="vPushRegistrationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="vClearTemporaryRequisitionHttpGetIn">
+    <wsdl:part name="sNxtactionr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="vClearTemporaryRequisitionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFieldValueNewHttpPostIn">
+    <wsdl:part name="fldname" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFieldValueNewHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCemFieldValue" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRequisitionHttpPostIn">
+    <wsdl:part name="sDocNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRequisitionHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCemDetailRequisition" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequisitionHttpPostIn">
+    <wsdl:part name="sNxtactionr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getPendingRequisitionHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCemPendingRequisition" />
+  </wsdl:message>
+  <wsdl:message name="getUserADHttpPostIn">
+    <wsdl:part name="sDomain" type="s:string" />
+    <wsdl:part name="sUserID" type="s:string" />
+    <wsdl:part name="sPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getUserADHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailFlowHttpPostIn">
+    <wsdl:part name="sDocNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailFlowHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCemDetailFlow" />
+  </wsdl:message>
+  <wsdl:message name="getBranchHttpPostIn" />
+  <wsdl:message name="getBranchHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="vInsertRequisitionHttpPostIn">
+    <wsdl:part name="sBranchCode" type="s:string" />
+    <wsdl:part name="sDocNumber" type="s:string" />
+    <wsdl:part name="sAction" type="s:string" />
+    <wsdl:part name="sDateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="vInsertRequisitionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="vUploadtoAccpacHttpPostIn" />
+  <wsdl:message name="vUploadtoAccpacHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="vGetDocumentWorkflowHttpPostIn" />
+  <wsdl:message name="vGetDocumentWorkflowHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="vPushRegistrationHttpPostIn">
+    <wsdl:part name="sUserID" type="s:string" />
+    <wsdl:part name="sRegistrationID" type="s:string" />
+    <wsdl:part name="isRegister" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="vPushRegistrationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="vClearTemporaryRequisitionHttpPostIn">
+    <wsdl:part name="sNxtactionr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="vClearTemporaryRequisitionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="getFieldValueNew">
+      <wsdl:input message="tns:getFieldValueNewSoapIn" />
+      <wsdl:output message="tns:getFieldValueNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRequisition">
+      <wsdl:input message="tns:getDetailRequisitionSoapIn" />
+      <wsdl:output message="tns:getDetailRequisitionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequisition">
+      <wsdl:input message="tns:getPendingRequisitionSoapIn" />
+      <wsdl:output message="tns:getPendingRequisitionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserAD">
+      <wsdl:input message="tns:getUserADSoapIn" />
+      <wsdl:output message="tns:getUserADSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailFlow">
+      <wsdl:input message="tns:getDetailFlowSoapIn" />
+      <wsdl:output message="tns:getDetailFlowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <wsdl:input message="tns:getBranchSoapIn" />
+      <wsdl:output message="tns:getBranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vInsertRequisition">
+      <wsdl:input message="tns:vInsertRequisitionSoapIn" />
+      <wsdl:output message="tns:vInsertRequisitionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vUploadtoAccpac">
+      <wsdl:input message="tns:vUploadtoAccpacSoapIn" />
+      <wsdl:output message="tns:vUploadtoAccpacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vGetDocumentWorkflow">
+      <wsdl:input message="tns:vGetDocumentWorkflowSoapIn" />
+      <wsdl:output message="tns:vGetDocumentWorkflowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vPushRegistration">
+      <wsdl:input message="tns:vPushRegistrationSoapIn" />
+      <wsdl:output message="tns:vPushRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vClearTemporaryRequisition">
+      <wsdl:input message="tns:vClearTemporaryRequisitionSoapIn" />
+      <wsdl:output message="tns:vClearTemporaryRequisitionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="getFieldValueNew">
+      <wsdl:input message="tns:getFieldValueNewHttpGetIn" />
+      <wsdl:output message="tns:getFieldValueNewHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRequisition">
+      <wsdl:input message="tns:getDetailRequisitionHttpGetIn" />
+      <wsdl:output message="tns:getDetailRequisitionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequisition">
+      <wsdl:input message="tns:getPendingRequisitionHttpGetIn" />
+      <wsdl:output message="tns:getPendingRequisitionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserAD">
+      <wsdl:input message="tns:getUserADHttpGetIn" />
+      <wsdl:output message="tns:getUserADHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailFlow">
+      <wsdl:input message="tns:getDetailFlowHttpGetIn" />
+      <wsdl:output message="tns:getDetailFlowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <wsdl:input message="tns:getBranchHttpGetIn" />
+      <wsdl:output message="tns:getBranchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vInsertRequisition">
+      <wsdl:input message="tns:vInsertRequisitionHttpGetIn" />
+      <wsdl:output message="tns:vInsertRequisitionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vUploadtoAccpac">
+      <wsdl:input message="tns:vUploadtoAccpacHttpGetIn" />
+      <wsdl:output message="tns:vUploadtoAccpacHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vGetDocumentWorkflow">
+      <wsdl:input message="tns:vGetDocumentWorkflowHttpGetIn" />
+      <wsdl:output message="tns:vGetDocumentWorkflowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vPushRegistration">
+      <wsdl:input message="tns:vPushRegistrationHttpGetIn" />
+      <wsdl:output message="tns:vPushRegistrationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vClearTemporaryRequisition">
+      <wsdl:input message="tns:vClearTemporaryRequisitionHttpGetIn" />
+      <wsdl:output message="tns:vClearTemporaryRequisitionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="getFieldValueNew">
+      <wsdl:input message="tns:getFieldValueNewHttpPostIn" />
+      <wsdl:output message="tns:getFieldValueNewHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRequisition">
+      <wsdl:input message="tns:getDetailRequisitionHttpPostIn" />
+      <wsdl:output message="tns:getDetailRequisitionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequisition">
+      <wsdl:input message="tns:getPendingRequisitionHttpPostIn" />
+      <wsdl:output message="tns:getPendingRequisitionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserAD">
+      <wsdl:input message="tns:getUserADHttpPostIn" />
+      <wsdl:output message="tns:getUserADHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailFlow">
+      <wsdl:input message="tns:getDetailFlowHttpPostIn" />
+      <wsdl:output message="tns:getDetailFlowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <wsdl:input message="tns:getBranchHttpPostIn" />
+      <wsdl:output message="tns:getBranchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vInsertRequisition">
+      <wsdl:input message="tns:vInsertRequisitionHttpPostIn" />
+      <wsdl:output message="tns:vInsertRequisitionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vUploadtoAccpac">
+      <wsdl:input message="tns:vUploadtoAccpacHttpPostIn" />
+      <wsdl:output message="tns:vUploadtoAccpacHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vGetDocumentWorkflow">
+      <wsdl:input message="tns:vGetDocumentWorkflowHttpPostIn" />
+      <wsdl:output message="tns:vGetDocumentWorkflowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vPushRegistration">
+      <wsdl:input message="tns:vPushRegistrationHttpPostIn" />
+      <wsdl:output message="tns:vPushRegistrationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="vClearTemporaryRequisition">
+      <wsdl:input message="tns:vClearTemporaryRequisitionHttpPostIn" />
+      <wsdl:output message="tns:vClearTemporaryRequisitionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getFieldValueNew">
+      <soap:operation soapAction="http://tempuri.org/getFieldValueNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRequisition">
+      <soap:operation soapAction="http://tempuri.org/getDetailRequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequisition">
+      <soap:operation soapAction="http://tempuri.org/getPendingRequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserAD">
+      <soap:operation soapAction="http://tempuri.org/getUserAD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailFlow">
+      <soap:operation soapAction="http://tempuri.org/getDetailFlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <soap:operation soapAction="http://tempuri.org/getBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vInsertRequisition">
+      <soap:operation soapAction="http://tempuri.org/vInsertRequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vUploadtoAccpac">
+      <soap:operation soapAction="http://tempuri.org/vUploadtoAccpac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vGetDocumentWorkflow">
+      <soap:operation soapAction="http://tempuri.org/vGetDocumentWorkflow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vPushRegistration">
+      <soap:operation soapAction="http://tempuri.org/vPushRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vClearTemporaryRequisition">
+      <soap:operation soapAction="http://tempuri.org/vClearTemporaryRequisition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getFieldValueNew">
+      <soap12:operation soapAction="http://tempuri.org/getFieldValueNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRequisition">
+      <soap12:operation soapAction="http://tempuri.org/getDetailRequisition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequisition">
+      <soap12:operation soapAction="http://tempuri.org/getPendingRequisition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserAD">
+      <soap12:operation soapAction="http://tempuri.org/getUserAD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailFlow">
+      <soap12:operation soapAction="http://tempuri.org/getDetailFlow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <soap12:operation soapAction="http://tempuri.org/getBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vInsertRequisition">
+      <soap12:operation soapAction="http://tempuri.org/vInsertRequisition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vUploadtoAccpac">
+      <soap12:operation soapAction="http://tempuri.org/vUploadtoAccpac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vGetDocumentWorkflow">
+      <soap12:operation soapAction="http://tempuri.org/vGetDocumentWorkflow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vPushRegistration">
+      <soap12:operation soapAction="http://tempuri.org/vPushRegistration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vClearTemporaryRequisition">
+      <soap12:operation soapAction="http://tempuri.org/vClearTemporaryRequisition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="getFieldValueNew">
+      <http:operation location="/getFieldValueNew" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRequisition">
+      <http:operation location="/getDetailRequisition" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequisition">
+      <http:operation location="/getPendingRequisition" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserAD">
+      <http:operation location="/getUserAD" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailFlow">
+      <http:operation location="/getDetailFlow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <http:operation location="/getBranch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vInsertRequisition">
+      <http:operation location="/vInsertRequisition" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vUploadtoAccpac">
+      <http:operation location="/vUploadtoAccpac" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vGetDocumentWorkflow">
+      <http:operation location="/vGetDocumentWorkflow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vPushRegistration">
+      <http:operation location="/vPushRegistration" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vClearTemporaryRequisition">
+      <http:operation location="/vClearTemporaryRequisition" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getFieldValueNew">
+      <http:operation location="/getFieldValueNew" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRequisition">
+      <http:operation location="/getDetailRequisition" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPendingRequisition">
+      <http:operation location="/getPendingRequisition" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserAD">
+      <http:operation location="/getUserAD" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailFlow">
+      <http:operation location="/getDetailFlow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBranch">
+      <http:operation location="/getBranch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vInsertRequisition">
+      <http:operation location="/vInsertRequisition" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vUploadtoAccpac">
+      <http:operation location="/vUploadtoAccpac" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vGetDocumentWorkflow">
+      <http:operation location="/vGetDocumentWorkflow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vPushRegistration">
+      <http:operation location="/vPushRegistration" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="vClearTemporaryRequisition">
+      <http:operation location="/vClearTemporaryRequisition" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://20.110.1.5:8092/RAS_NEW/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://20.110.1.5:8092/RAS_NEW/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://20.110.1.5:8092/RAS_NEW/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://20.110.1.5:8092/RAS_NEW/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
